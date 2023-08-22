@@ -64,10 +64,10 @@
         letter-spacing: 10px;
       }
 
-      .w3-wide{
+      .w3-wide {
         letter-spacing: 6px;
       }
-      
+
       .w3-hover-opacity {
         cursor: pointer;
       }
@@ -137,8 +137,12 @@
     <div class="bgimg-1 w3-display-container" id="home">
       <div class="w3-display-middle" style="white-space: nowrap">
         <span
-          class="w3-center w3-padding-large w3-black w3-xlarge extra-wide w3-animate-opacity"
-          ><span class="w3-hide-small">HANS </span>CHRISTIAN DIEKMANN</span
+          class="w3-hide-small w3-center w3-padding-large w3-black w3-xlarge extra-wide w3-animate-opacity"
+          ><span class="w3-hide-medium">HANS </span>CHRISTIAN DIEKMANN</span
+        >
+        <span
+          class="w3-hide-large w3-hide-medium w3-center w3-padding-large w3-black w3-xlarge extra-wide w3-animate-opacity"
+          >H.C. DIEKMANN</span
         >
       </div>
     </div>
@@ -147,16 +151,16 @@
     <div class="w3-content w3-container w3-padding-64" id="about">
       <h3 class="w3-center">ABOUT ME</h3>
       <p class="w3-center">
-        <em>Junior Software developer and Technology enthusiast</em>
+        <em>Junior software developer and Technology enthusiast</em>
       </p>
       <p>
-        I am an enthusiastic software engineer with over three years of
-        experience in the tech industry. I have merged my background in
-        mechatronics with growing expertise in software development, AI and
-        cloud solutions. I've developed a versatile skill set including tools
-        and languages like Docker, Python, and C/C++. My expertise extends to
-        web development and Agile methodologies, enabling me to tackle complex
-        challenges with innovative solutions.
+        I am an enthusiastic software engineer with over three years of working
+        experience. I have merged my background as a mechatronics technincian in
+        the engineering industry with growing expertise in software development,
+        AI and cloud solutions. I've developed a versatile skill set including
+        tools and languages like Docker, Python, and C/C++. My expertise extends
+        to web development and Agile methodologies, enabling me to tackle
+        complex challenges with innovative solutions.
       </p>
       <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
@@ -178,12 +182,14 @@
 
         <!-- Hide this text on small devices -->
         <div class="w3-col m6 w3-hide-small w3-padding-large">
-          <p>Welcome to my portfolio.</p><br/>
-          <p>My unique blend of experience in
-            software development and hardware technologies, such as PLC programming
-            and 3D printing, establishes a strong foundation for building robust and
-            efficient systems. Let's connect and explore how we can collaborate on
-            your next project!</p>
+          <p>Welcome to my portfolio.</p>
+          <br />
+          <p>
+            My unique blend of experience in software development and hardware
+            technologies, such as PLC programming and 3D printing, establishes a
+            strong foundation for building robust and efficient systems. Let's
+            connect and explore how we can collaborate on your next project!
+          </p>
         </div>
       </div>
       <p class="w3-large w3-center w3-padding-16">Mentionable skills:</p>
@@ -205,7 +211,7 @@
           75%
         </div>
       </div>
-      <p class="w3-wide"><i class="fa fa-cloud"></i>Cloud Solutions Architecture</p>
+      <p class="w3-wide"><i class="fa fa-cloud"></i>Cloud Architecture</p>
       <div class="w3-light-grey">
         <div
           class="w3-container w3-padding-small w3-dark-grey w3-center"
@@ -238,8 +244,8 @@
     <div class="w3-content w3-container w3-padding-64" id="portfolio">
       <h3 class="w3-center">MY WORK</h3>
       <p class="w3-center">
-        <em>Here are some of my latest projects.<br /></em>
-        (This section is WIP meanwhile you can check out my GitHub)
+        <!-- <em>Here are some of my latest projects.<br /></em> -->
+        (This section is WIP meanwhile, you can check out my GitHub)
       </p>
 
       <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -366,59 +372,58 @@
     <!-- Container (Contact Section) -->
     <div class="w3-content w3-container w3-padding-64" id="contact">
       <h3 class="w3-center">CONTACT ME</h3>
-        <div class="w3-row w3-padding-32 w3-panel">
-          <div class="w3-large w3-margin-bottom">
-            <i
-              class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
-            ></i>
-            Eindhoven, NL<br />
-            <i
-              class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
-            ></i>
-            +31 643760160<br />
-            <i
-              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
-            ></i>
-            hcdiekmann@hotmail.com<br />
-          </div>
-          <p>Send feedback or leave me a note:</p>
-          <form action="/action_page.php" target="_blank">
-            <div class="w3-row-padding" style="margin: 0 -16px 8px -16px">
-              <div class="w3-half">
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  placeholder="Name"
-                  required
-                  name="Name"
-                />
-              </div>
-              <div class="w3-half">
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  placeholder="Email"
-                  required
-                  name="Email"
-                />
-              </div>
-            </div>
-            <input
-              class="w3-input w3-border"
-              type="text"
-              placeholder="Message"
-              required
-              name="Message"
-            />
-            <button
-              class="w3-button w3-black w3-right w3-round-medium w3-section"
-              type="submit"
-            >
-              <i class="fa fa-paper-plane"></i> SEND
-            </button>
-          </form>
+      <div class="w3-row w3-padding-32 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i
+            class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+          ></i>
+          Eindhoven, NL<br />
+          <i
+            class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+          ></i>
+          +31 643760160<br />
+          <i
+            class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+          ></i>
+          hcdiekmann@hotmail.com<br />
         </div>
-
+        <p>Send feedback or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin: 0 -16px 8px -16px">
+            <div class="w3-half">
+              <input
+                class="w3-input w3-border"
+                type="text"
+                placeholder="Name"
+                required
+                name="Name"
+              />
+            </div>
+            <div class="w3-half">
+              <input
+                class="w3-input w3-border"
+                type="text"
+                placeholder="Email"
+                required
+                name="Email"
+              />
+            </div>
+          </div>
+          <input
+            class="w3-input w3-border"
+            type="text"
+            placeholder="Message"
+            required
+            name="Message"
+          />
+          <button
+            class="w3-button w3-black w3-right w3-round-medium w3-section"
+            type="submit"
+          >
+            <i class="fa fa-paper-plane"></i> SEND
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- Footer -->
