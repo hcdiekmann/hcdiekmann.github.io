@@ -255,23 +255,23 @@
             style="width: 100%"
             onclick="onClick(this)"
             class="w3-hover-opacity"
-            alt="Omborokko Safaris React.js website"
+            alt="Omborokko Safaris website"
           />
         </div>
 
         <div class="w3-col m3">
           <img
-            src="images/ROS-2-Gazebo-swarm-sim.png"
+            src="/images/ROS-2-Gazebo-swarm-sim.png"
             style="width: 100%"
             onclick="onClick(this)"
             class="w3-hover-opacity"
-            alt="ROS 2 Robot Swarm maze simulation"
+            alt="ROS 2 Robot Swarm simulation"
           />
         </div>
 
         <div class="w3-col m3">
           <img
-            src="images/UP-Xtreme-i11-robotics-development-kit.png"
+            src="/images/UP-Xtreme-i11-robotics-development-kit.png"
             style="width: 100%"
             onclick="onClick(this)"
             class="w3-hover-opacity"
@@ -281,11 +281,11 @@
 
         <div class="w3-col m3">
           <img
-            src="images/ROS-2-object-detection-gazebo-sim.png"
+            src="/images/ROS-2-yolov8.png"
             style="width: 100%"
             onclick="onClick(this)"
             class="w3-hover-opacity"
-            alt="ROS 2 custom object detection package"
+            alt="ROS 2 object detection"
           />
         </div>
       </div>
@@ -312,13 +312,24 @@
       <span
         class="w3-button w3-large w3-black w3-display-topright"
         title="Close Modal Image"
-        ><i class="fa fa-remove"></i
-      ></span>
+      >
+        <i class="fa fa-remove"></i>
+      </span>
       <div
         class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
       >
         <img id="img01" class="w3-image" />
         <p id="caption" class="w3-opacity w3-large"></p>
+        <div id="modal-info" class="w3-container">
+          <p id="modal-paragraph"></p>
+          <a id="modal-link" href="#" target="_blank">
+            <button
+              class="w3-button w3-padding-small w3-light-grey w3-round-medium"
+            >
+              <i class="fa fa-github w3-margin-right"></i> View Repository
+            </button>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -412,18 +423,59 @@
     </footer>
 
     <script>
-      // Modal Image Gallery
+      // Define projects
+      const projects = [
+        {
+          src: '/images/Omborokko-react-ts-website.webp',
+          description:
+            'This is a dynamic React.js website designed and created for a client in the hospitality sector.',
+          repoLink: 'https://github.com/hcdiekmann/omborokko-safaris',
+        },
+        {
+          src: '/images/ROS-2-Gazebo-swarm-sim.png',
+          description:
+            'An autonmous exploration project of a custom robot swarm using ROS (Robot Operating System) and SLAM with Gazebo.',
+          repoLink: 'https://github.com/hcdiekmann/pathfinder',
+        },
+        {
+          src: '/images/UP-Xtreme-i11-robotics-development-kit.png',
+          description:
+            'This project extended the UP autonomous mobile robot kit with a high precision manipulator and a close range depth camera.',
+          repoLink: 'https://github.com/hcdiekmann/UP-robotic-manipulators',
+        },
+        {
+          src: '/images/ROS-2-yolov8.png',
+          description:
+            'A custom ROS 2 object detection package using the YOLOv8 architecture from the Ultralytics library.',
+          repoLink: 'https://github.com/hcdiekmann/ultralytics_ros2',
+        },
+      ];
+
       function onClick(element) {
         document.getElementById('img01').src = element.src;
         document.getElementById('modal01').style.display = 'block';
         var captionText = document.getElementById('caption');
         captionText.innerHTML = element.alt;
+
+        // Extract the relevant part of the clicked image's src
+        const clickedImageSrc = new URL(element.src).pathname;
+
+        // Find the project that matches the clicked image
+        const project = projects.find((proj) => proj.src === clickedImageSrc);
+
+        if (project) {
+          var modalParagraph = document.getElementById('modal-paragraph');
+          var modalLink = document.getElementById('modal-link');
+          modalParagraph.textContent = project.description;
+          modalLink.href = project.repoLink;
+        }
       }
 
       // Change style of navbar on scroll
       window.onscroll = function () {
         myFunction();
       };
+
       function myFunction() {
         var navbar = document.getElementById('myNavbar');
         if (
